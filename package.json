@@ -1,0 +1,33 @@
+{
+  "name": "vue-meteor-v3",
+  "private": true,
+  "scripts": {
+    "start": "meteor run --exclude-archs web.browser.legacy, web.cordova",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer",
+    "npm-latest": "ncu --interactive --format group",
+    "lint": "npx @biomejs/biome check --write ./"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.23.5",
+    "meteor-node-stubs": "^1.2.7",
+    "meteor-vite": "^1.10.3",
+    "valibot": "^0.26.0"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.js",
+      "server": "server/main.ts"
+    },
+    "testModule": "tests/main.js"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "@types/node": "^20.14.12",
+    "@vitejs/plugin-vue": "^4.6.2",
+    "typescript": "^5.5.4",
+    "vite": "^4.5.2",
+    "vue": "^3.4.14"
+  }
+}
