@@ -15,4 +15,5 @@ export interface LinkDocument {
   _id: string;
   url: string;
   title: string;
+  createdAt?: Date;
 }

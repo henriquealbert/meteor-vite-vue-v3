@@ -5,10 +5,6 @@ import "../imports/api/links/links.methods";
 import "../imports/api/links/server/links.publications";
 
 Meteor.startup(async () => {
-  // Code to run on server startup.
-  console.log(`Greetings from ${module.id}!`);
-  console.log(`Meteor server started up successfully: ${Meteor.absoluteUrl()}`);
-
   if ((await LinksCollection.find({}).countAsync()) > 0) {
     return;
   }
