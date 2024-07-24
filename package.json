@@ -7,13 +7,14 @@
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
     "visualize": "meteor --production --extra-packages bundle-visualizer",
     "npm-latest": "ncu --interactive --format group",
-    "lint": "npx @biomejs/biome check --write ./"
+    "lint": "npx @biomejs/biome check --write ./",
+    "check-types": "tsc --noEmit"
   },
   "dependencies": {
     "@babel/runtime": "^7.24.8",
     "meteor-node-stubs": "^1.2.9",
     "meteor-vite": "^1.10.4",
-    "valibot": "^0.36.0"
+    "valibot": "^0.26.0"
   },
   "meteor": {
     "mainModule": {
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
+    "@types/meteor": "^2.9.8",
     "@types/node": "^20.14.12",
     "@vitejs/plugin-vue": "^4.6.2",
     "npm-check-updates": "^16.14.20",
