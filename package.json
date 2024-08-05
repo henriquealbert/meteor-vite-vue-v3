@@ -3,8 +3,6 @@
   "private": true,
   "scripts": {
     "start": "meteor --exclude-archs 'web.browser.legacy, web.cordova'",
-    "test": "meteor test --once --driver-package meteortesting:mocha",
-    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
     "visualize": "meteor --production --extra-packages bundle-visualizer",
     "npm-latest": "ncu --interactive --format group",
     "lint": "npx @biomejs/biome check --write ./",
@@ -20,8 +18,7 @@
     "mainModule": {
       "client": "client/main.js",
       "server": "server/main.ts"
-    },
-    "testModule": "tests/main.js"
+    }
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
