@@ -1,5 +1,4 @@
 import { Meteor } from "meteor/meteor";
-import { onPageLoad } from "meteor/server-render";
 import LinksCollection from "../imports/api/links/links.collection";
 import "../imports/api/links/links.methods";
 import "../imports/api/links/server/links.publications";
@@ -15,7 +14,3 @@ Meteor.startup(async () => {
   });
 });
 
-onPageLoad((sink) => {
-  // Code to run on every request.
-  sink.renderIntoElementById("server-render-target", `Server time: ${new Date()}`);
-});
